@@ -33,8 +33,16 @@
 
 <div class="announce">
 <h3>Training Sessions:</h3>
-<p>The next training session will be:<br /><br /><strong> 23rd Feb 2022</strong></p>
+<p>The next training session will be:</p>
+<h4 id="displayDateNoTime"></h4>
 <p class="textright"><a href="train.html">More details...</a></p>
+	
+<script type="text/javascript">
+  var dayOfWeek =3; // Wednesday
+  var today = new Date();
+  today.setDate(today.getDate() + (dayOfWeek + 7 - today.getDay()) % 7);
+  document.getElementById("displayDateNoTime").innerHTML = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate();
+</script>
 
 </div>
 
